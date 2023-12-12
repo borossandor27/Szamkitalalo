@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Szamkitalalo</string>
+    <string name="ellenorzesGombFelirat">Ellenőrzés</string>
+    <string name="tippeljGombFelirat">Tippelj!</string>
+    <string name="heartKepFelirat">szív</string>
 </resources>

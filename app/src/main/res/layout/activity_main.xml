@@ -19,24 +19,27 @@
             android:id="@+id/elet1"
             android:layout_width="100sp"
             android:layout_height="100sp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
+            android:contentDescription="@string/heartKepFelirat"
             android:src="@drawable/heart" />
 
         <ImageView
             android:id="@+id/elet2"
             android:layout_width="100sp"
             android:layout_height="100sp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
+            android:contentDescription="@string/heartKepFelirat"
             android:src="@drawable/heart" />
 
         <ImageView
             android:id="@+id/elet3"
             android:layout_width="100sp"
             android:layout_height="100sp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
+            android:contentDescription="@string/heartKepFelirat"
             android:src="@drawable/heart" />
     </LinearLayout>
 
@@ -45,12 +48,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/Eletek"
-        android:layout_marginTop="20dp"
-        android:height="40dp"
-        android:hint="Tippelj!"
+        android:layout_marginTop="20sp"
+        android:height="40sp"
+        android:gravity="center_horizontal"
+        android:hint="@string/tippeljGombFelirat"
         android:inputType="number"
-        android:textSize="20dp"
-        android:gravity="center_horizontal"/>
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/ellenorzes"
@@ -59,7 +62,7 @@
         android:layout_below="@id/tipp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="Ellenőrzés" />
+        android:text="@string/ellenorzesGombFelirat" />
 
     <TextView
         android:id="@+id/eredmeny"
@@ -68,7 +71,7 @@
         android:layout_below="@id/ellenorzes"
         android:layout_marginTop="20dp"
         android:gravity="center_horizontal"
-        android:text="Eredmény: 0"
+        android:text=""
         android:textSize="20sp" />
 </RelativeLayout>
 
