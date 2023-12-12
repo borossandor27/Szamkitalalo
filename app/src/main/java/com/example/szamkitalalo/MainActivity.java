@@ -2,6 +2,7 @@ package com.example.szamkitalalo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     EditText tipp;
     TextView eredmeny;
     Button tippel;
-
+MediaPlayer mediaPlayer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
             tippekSzama++;
             if (tippSzam == randomSzam) {
                 eredmeny.setText("Gratulálok, eltaláltad " + tippekSzama + " tippből!");
+                mediaPlayer = MediaPlayer.create(this, R.raw.applause);
+                mediaPlayer.start();//-- zene lejátszása
                 tippel.setEnabled(false);
             } else {
                 if (tippekSzama == 1) {
@@ -59,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
         } else {
             eredmeny.setText("A kitalálandó szám kisebb!");
         }
+        mediaPlayer = MediaPlayer.create(this, R.raw.failure);
+        mediaPlayer.start();
     }
 
 
