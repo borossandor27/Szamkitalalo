@@ -39,17 +39,28 @@ public class MainActivity extends AppCompatActivity {
                 tippel.setEnabled(false);
             } else {
                 if (tippekSzama == 1) {
+                    tippelesEredmenye(tippSzam);
                     elet3.setImageResource(R.drawable.heart_empty);
                 } else if (tippekSzama == 2) {
+                    tippelesEredmenye(tippSzam);
                     elet2.setImageResource(R.drawable.heart_empty);
                 } else {
                     elet1.setImageResource(R.drawable.heart_empty);
-                    eredmeny.setText("Sajnos nem találtad el " + tippekSzama + " tippből!");
+                    eredmeny.setText("Sajnos nem találtad el " + tippekSzama + " tippből!\nA kitalálandó szám: " + randomSzam + " volt.");
                     tippel.setEnabled(false);
                 }
             }
         });
     }
+
+    private void tippelesEredmenye(int tippSzam) {
+        if (tippSzam < randomSzam) {
+            eredmeny.setText("A kitalálandó szám nagyobb!");
+        } else {
+            eredmeny.setText("A kitalálandó szám kisebb!");
+        }
+    }
+
 
     private void init() {
         random = new Random();
@@ -61,6 +72,6 @@ public class MainActivity extends AppCompatActivity {
         elet2 = findViewById(R.id.elet2);
         elet3 = findViewById(R.id.elet3);
         eredmeny = findViewById(R.id.eredmeny);
-        eredmeny.setText(String.valueOf(randomSzam));
+        eredmeny.setText("Még nem tippeltél!");
     }
 }
